@@ -1,0 +1,12 @@
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\bin\Debug\U14 LEDShed.exe.config
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\bin\Debug\U14 LEDShed.exe
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\bin\Debug\U14 LEDShed.pdb
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\obj\Debug\U14 LEDShed.csprojAssemblyReference.cache
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\obj\Debug\U14_LEDShed.Form1.resources
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\obj\Debug\U14_LEDShed.Properties.Resources.resources
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\obj\Debug\U14 LEDShed.csproj.GenerateResource.cache
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\obj\Debug\U14 LEDShed.csproj.CoreCompileInputs.cache
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\obj\Debug\U14 LEDShed.exe
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\obj\Debug\U14 LEDShed.pdb
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\obj\Debug\U14_LEDShed.WelcomeScreen.resources
+H:\downloads\Unit 14\project\U14 LEDShed\U14 LEDShed\obj\Debug\U14_LEDShed.EventForm.resources
