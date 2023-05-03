@@ -10,24 +10,16 @@ using System.Windows.Forms;
 
 namespace U14_LEDShed
 {
-    public partial class WelcomeScreen : Form
+    public partial class EventViewer : Form
     {
         Control controlClass;
-        public WelcomeScreen(Control inControl)
+        public EventViewer(Control inControl)
         {
             InitializeComponent();
             controlClass = inControl;
         }
 
-        private void btnNewEvent_Click(object sender, EventArgs e)
-        {
-            EventForm eventform = new EventForm(controlClass);
-            this.Hide();
-            eventform.ShowDialog();
-            this.Show();
-        }
-
-        private void WelcomeScreen_Load(object sender, EventArgs e)
+        private void EventViewer_Load(object sender, EventArgs e)
         {
 
         }

@@ -39,6 +39,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
             this.SuspendLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             // 
             // groupBox1
             // 
@@ -123,6 +124,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "WelcomeScreen";
             this.Text = "LED Shed Menu";
+            this.Load += new System.EventHandler(this.WelcomeScreen_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).EndInit();

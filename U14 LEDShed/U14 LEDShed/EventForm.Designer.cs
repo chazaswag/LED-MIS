@@ -44,11 +44,6 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.CostDetailsBox = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnCalculate = new System.Windows.Forms.Button();
-            this.tblStock = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
             this.EventDetailsBox = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -61,31 +56,54 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btnCompleteEvent = new System.Windows.Forms.GroupBox();
+            this.txtTotalCost = new System.Windows.Forms.Label();
+            this.txtCateringCost = new System.Windows.Forms.Label();
+            this.txtStaffingCost = new System.Windows.Forms.Label();
+            this.txtTravelCost = new System.Windows.Forms.Label();
+            this.txtAccomodationCost = new System.Windows.Forms.Label();
+            this.btnTotalCalc = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tblStock = new System.Windows.Forms.DataGridView();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCalculate = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CostDetailsBox = new System.Windows.Forms.GroupBox();
+            this.EventContactBox = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtEventName = new System.Windows.Forms.TextBox();
+            this.btnComplete = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.CostDetailsBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStock)).BeginInit();
             this.EventDetailsBox.SuspendLayout();
+            this.btnCompleteEvent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblStock)).BeginInit();
+            this.CostDetailsBox.SuspendLayout();
+            this.EventContactBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.groupBox2.Controls.Add(this.btnComplete);
             this.groupBox2.Controls.Add(this.btnStock);
             this.groupBox2.Controls.Add(this.btnEventCosts);
             this.groupBox2.Controls.Add(this.btnContact);
             this.groupBox2.Controls.Add(this.btnEventDetails);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox2.Location = new System.Drawing.Point(2, 85);
+            this.groupBox2.Location = new System.Drawing.Point(-7, 83);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 368);
+            this.groupBox2.Size = new System.Drawing.Size(278, 370);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             // 
@@ -107,6 +125,7 @@
             this.btnEventCosts.TabIndex = 14;
             this.btnEventCosts.Text = "Total Costs";
             this.btnEventCosts.UseVisualStyleBackColor = true;
+            this.btnEventCosts.Click += new System.EventHandler(this.btnEventCosts_Click);
             // 
             // btnContact
             // 
@@ -116,6 +135,7 @@
             this.btnContact.TabIndex = 13;
             this.btnContact.Text = "Contact Details";
             this.btnContact.UseVisualStyleBackColor = true;
+            this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
             // btnEventDetails
             // 
@@ -218,62 +238,6 @@
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Select Equipment";
-            // 
-            // CostDetailsBox
-            // 
-            this.CostDetailsBox.BackColor = System.Drawing.SystemColors.GrayText;
-            this.CostDetailsBox.Controls.Add(this.label3);
-            this.CostDetailsBox.Controls.Add(this.btnCalculate);
-            this.CostDetailsBox.Controls.Add(this.tblStock);
-            this.CostDetailsBox.Controls.Add(this.label7);
-            this.CostDetailsBox.Location = new System.Drawing.Point(269, 85);
-            this.CostDetailsBox.Name = "CostDetailsBox";
-            this.CostDetailsBox.Size = new System.Drawing.Size(536, 368);
-            this.CostDetailsBox.TabIndex = 12;
-            this.CostDetailsBox.TabStop = false;
-            this.CostDetailsBox.Visible = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(251, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Total Cost:";
-            // 
-            // btnCalculate
-            // 
-            this.btnCalculate.Location = new System.Drawing.Point(146, 22);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(90, 23);
-            this.btnCalculate.TabIndex = 10;
-            this.btnCalculate.Text = "Calculate Total";
-            this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
-            // 
-            // tblStock
-            // 
-            this.tblStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Item,
-            this.Amount,
-            this.Cost,
-            this.TotalCost});
-            this.tblStock.Location = new System.Drawing.Point(51, 54);
-            this.tblStock.Name = "tblStock";
-            this.tblStock.Size = new System.Drawing.Size(443, 270);
-            this.tblStock.TabIndex = 9;
-            this.tblStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblStock_CellContentClick_1);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(50, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Select Equipment";
             // 
             // EventDetailsBox
             // 
@@ -385,6 +349,104 @@
             this.textBox5.Size = new System.Drawing.Size(146, 20);
             this.textBox5.TabIndex = 0;
             // 
+            // btnCompleteEvent
+            // 
+            this.btnCompleteEvent.BackColor = System.Drawing.SystemColors.GrayText;
+            this.btnCompleteEvent.Controls.Add(this.txtTotalCost);
+            this.btnCompleteEvent.Controls.Add(this.txtCateringCost);
+            this.btnCompleteEvent.Controls.Add(this.txtStaffingCost);
+            this.btnCompleteEvent.Controls.Add(this.txtTravelCost);
+            this.btnCompleteEvent.Controls.Add(this.txtAccomodationCost);
+            this.btnCompleteEvent.Controls.Add(this.btnTotalCalc);
+            this.btnCompleteEvent.Location = new System.Drawing.Point(269, 83);
+            this.btnCompleteEvent.Name = "btnCompleteEvent";
+            this.btnCompleteEvent.Size = new System.Drawing.Size(545, 378);
+            this.btnCompleteEvent.TabIndex = 17;
+            this.btnCompleteEvent.TabStop = false;
+            // 
+            // txtTotalCost
+            // 
+            this.txtTotalCost.AutoSize = true;
+            this.txtTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalCost.Location = new System.Drawing.Point(113, 220);
+            this.txtTotalCost.Name = "txtTotalCost";
+            this.txtTotalCost.Size = new System.Drawing.Size(122, 25);
+            this.txtTotalCost.TabIndex = 8;
+            this.txtTotalCost.Text = "Total Cost: ";
+            // 
+            // txtCateringCost
+            // 
+            this.txtCateringCost.AutoSize = true;
+            this.txtCateringCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCateringCost.Location = new System.Drawing.Point(80, 147);
+            this.txtCateringCost.Name = "txtCateringCost";
+            this.txtCateringCost.Size = new System.Drawing.Size(155, 25);
+            this.txtCateringCost.TabIndex = 7;
+            this.txtCateringCost.Text = "Catering Cost: ";
+            // 
+            // txtStaffingCost
+            // 
+            this.txtStaffingCost.AutoSize = true;
+            this.txtStaffingCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStaffingCost.Location = new System.Drawing.Point(88, 113);
+            this.txtStaffingCost.Name = "txtStaffingCost";
+            this.txtStaffingCost.Size = new System.Drawing.Size(147, 25);
+            this.txtStaffingCost.TabIndex = 6;
+            this.txtStaffingCost.Text = "Staffing Cost: ";
+            // 
+            // txtTravelCost
+            // 
+            this.txtTravelCost.AutoSize = true;
+            this.txtTravelCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTravelCost.Location = new System.Drawing.Point(101, 80);
+            this.txtTravelCost.Name = "txtTravelCost";
+            this.txtTravelCost.Size = new System.Drawing.Size(134, 25);
+            this.txtTravelCost.TabIndex = 5;
+            this.txtTravelCost.Text = "Travel Cost: ";
+            // 
+            // txtAccomodationCost
+            // 
+            this.txtAccomodationCost.AutoSize = true;
+            this.txtAccomodationCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccomodationCost.Location = new System.Drawing.Point(26, 50);
+            this.txtAccomodationCost.Name = "txtAccomodationCost";
+            this.txtAccomodationCost.Size = new System.Drawing.Size(210, 25);
+            this.txtAccomodationCost.TabIndex = 4;
+            this.txtAccomodationCost.Text = "Accomodation Cost: ";
+            // 
+            // btnTotalCalc
+            // 
+            this.btnTotalCalc.Location = new System.Drawing.Point(133, 263);
+            this.btnTotalCalc.Name = "btnTotalCalc";
+            this.btnTotalCalc.Size = new System.Drawing.Size(82, 29);
+            this.btnTotalCalc.TabIndex = 0;
+            this.btnTotalCalc.Text = "Calculate";
+            this.btnTotalCalc.UseVisualStyleBackColor = true;
+            this.btnTotalCalc.Click += new System.EventHandler(this.btnComplete_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(50, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Select Equipment";
+            // 
+            // tblStock
+            // 
+            this.tblStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Item,
+            this.Amount,
+            this.Cost,
+            this.Total});
+            this.tblStock.Location = new System.Drawing.Point(51, 54);
+            this.tblStock.Name = "tblStock";
+            this.tblStock.Size = new System.Drawing.Size(443, 270);
+            this.tblStock.TabIndex = 9;
+            this.tblStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblStock_CellContentClick_1);
+            // 
             // Item
             // 
             this.Item.Frozen = true;
@@ -404,20 +466,130 @@
             this.Cost.HeaderText = "Cost";
             this.Cost.Name = "Cost";
             // 
-            // TotalCost
+            // Total
             // 
-            this.TotalCost.HeaderText = "TotalCost";
-            this.TotalCost.Name = "TotalCost";
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Location = new System.Drawing.Point(146, 22);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(90, 23);
+            this.btnCalculate.TabIndex = 10;
+            this.btnCalculate.Text = "Calculate Total";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(251, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Total Cost:";
+            // 
+            // CostDetailsBox
+            // 
+            this.CostDetailsBox.BackColor = System.Drawing.SystemColors.GrayText;
+            this.CostDetailsBox.Controls.Add(this.label3);
+            this.CostDetailsBox.Controls.Add(this.btnCalculate);
+            this.CostDetailsBox.Controls.Add(this.tblStock);
+            this.CostDetailsBox.Controls.Add(this.label7);
+            this.CostDetailsBox.Location = new System.Drawing.Point(269, 85);
+            this.CostDetailsBox.Name = "CostDetailsBox";
+            this.CostDetailsBox.Size = new System.Drawing.Size(536, 368);
+            this.CostDetailsBox.TabIndex = 12;
+            this.CostDetailsBox.TabStop = false;
+            this.CostDetailsBox.Visible = false;
+            // 
+            // EventContactBox
+            // 
+            this.EventContactBox.BackColor = System.Drawing.SystemColors.GrayText;
+            this.EventContactBox.Controls.Add(this.label14);
+            this.EventContactBox.Controls.Add(this.txtPhoneNumber);
+            this.EventContactBox.Controls.Add(this.label16);
+            this.EventContactBox.Controls.Add(this.label15);
+            this.EventContactBox.Controls.Add(this.txtEmail);
+            this.EventContactBox.Controls.Add(this.txtEventName);
+            this.EventContactBox.Location = new System.Drawing.Point(269, 83);
+            this.EventContactBox.Name = "EventContactBox";
+            this.EventContactBox.Size = new System.Drawing.Size(533, 372);
+            this.EventContactBox.TabIndex = 18;
+            this.EventContactBox.TabStop = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(59, 64);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(66, 13);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "Event Name";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Location = new System.Drawing.Point(55, 147);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(146, 20);
+            this.txtPhoneNumber.TabIndex = 0;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(61, 131);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 13);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Phone Number";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(59, 183);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 13);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Email Address";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(53, 199);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(456, 28);
+            this.txtEmail.TabIndex = 2;
+            // 
+            // txtEventName
+            // 
+            this.txtEventName.Location = new System.Drawing.Point(53, 90);
+            this.txtEventName.Name = "txtEventName";
+            this.txtEventName.Size = new System.Drawing.Size(146, 20);
+            this.txtEventName.TabIndex = 4;
+            // 
+            // btnComplete
+            // 
+            this.btnComplete.Location = new System.Drawing.Point(81, 313);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(82, 29);
+            this.btnComplete.TabIndex = 9;
+            this.btnComplete.Text = "Complete";
+            this.btnComplete.UseVisualStyleBackColor = true;
+            this.btnComplete.Click += new System.EventHandler(this.button1_Click);
             // 
             // EventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.CostDetailsBox);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnCompleteEvent);
+            this.Controls.Add(this.EventContactBox);
             this.Controls.Add(this.EventDetailsBox);
+            this.Controls.Add(this.CostDetailsBox);
             this.Name = "EventForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EventForm";
@@ -429,11 +601,15 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.CostDetailsBox.ResumeLayout(false);
-            this.CostDetailsBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblStock)).EndInit();
             this.EventDetailsBox.ResumeLayout(false);
             this.EventDetailsBox.PerformLayout();
+            this.btnCompleteEvent.ResumeLayout(false);
+            this.btnCompleteEvent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblStock)).EndInit();
+            this.CostDetailsBox.ResumeLayout(false);
+            this.CostDetailsBox.PerformLayout();
+            this.EventContactBox.ResumeLayout(false);
+            this.EventContactBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -454,9 +630,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox CostDetailsBox;
-        private System.Windows.Forms.DataGridView tblStock;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox EventDetailsBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
@@ -469,11 +642,29 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox btnCompleteEvent;
+        private System.Windows.Forms.Button btnTotalCalc;
+        private System.Windows.Forms.Label txtAccomodationCost;
+        private System.Windows.Forms.Label txtCateringCost;
+        private System.Windows.Forms.Label txtStaffingCost;
+        private System.Windows.Forms.Label txtTravelCost;
+        private System.Windows.Forms.Label txtTotalCost;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView tblStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox CostDetailsBox;
+        private System.Windows.Forms.GroupBox EventContactBox;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtEventName;
+        private System.Windows.Forms.Button btnComplete;
     }
 }

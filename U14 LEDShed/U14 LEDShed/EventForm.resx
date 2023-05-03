@@ -121,7 +121,7 @@
   <data name="iconLedShed.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlMAAABDCAYAAAC4CIBaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAGp9JREFUeF7tnc2x5DaWhWWCPBgt2gAtZ1mb2SuiHejt7MqEMkEmaDEGyIGOkAky
+        EAAACxABrSO9dQAAGp9JREFUeF7tnc2x5DaWhWWCPBgt2gAtZ1mb2SuiHejt7MqEMkEmaDEGyIGOkAky
         QQ50hDyowXkqpJA3D8iDiwswSeJEfE+lfCSI34tDEMz33devX8GXRE1/Jn4r+DWB40v+lfg0iPI6vyTK
         vPyRsMLnuVyMHxPsOgo4l6XJwLHI8+cES+uHBDuPUeb5+2+fZXANtFFWWT+srX5KlPkYTUs5F4tFH4gV
         iMcY6xj/ZTzI/JzA7zE+bTxh4JjfE4gzazwvLJjjynnuln0k/wOD6ypCsMjlQhDA/0cKZiSnXwPBbKSQ
@@ -247,15 +247,6 @@
   <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="Item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -265,7 +256,7 @@
   <metadata name="Cost.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="TotalCost.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Total.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

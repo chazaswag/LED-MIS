@@ -41,6 +41,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             // 
             // label2
             // 
@@ -163,6 +164,7 @@
         private System.Windows.Forms.Label lblWarning;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
+
     }
 }
 
