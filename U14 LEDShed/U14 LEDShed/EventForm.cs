@@ -74,14 +74,17 @@ namespace U14_LEDShed
         {
             for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
             {
-
                 float fQuantity = float.Parse(tblStock.Rows[rows].Cells["Amount"].Value.ToString());
                 float fCost = float.Parse(tblStock.Rows[rows].Cells["Cost"].Value.ToString());
                 float fAmount = fQuantity * fCost;
                 tblStock.Rows[rows].Cells["Total"].Value = fAmount;
-                float fTotal = float.Parse(tblStock.Rows[rows].Cells["Total"].Value.ToString());
-                fOverall += fTotal;
-                label3.Text = "Total: " + fOverall.ToString();
+            }
+            fOverall = 0;
+            for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
+            {
+                    float fTotal = float.Parse(tblStock.Rows[rows].Cells["Total"].Value.ToString());
+                    fOverall += fTotal;
+                    label3.Text = "Total: " + fOverall.ToString();
             }
         }
         public void totalmoney()
@@ -101,7 +104,8 @@ namespace U14_LEDShed
         public void writeToObject()
         {
             evnt.sEventName = textBox5.Text;
-        evnt.sEventDetails = textBox4.Text;
+            evnt.sCompanyName = txtCompanyName.Text;
+            evnt.sEventDetails = textBox4.Text;
             evnt.sEventLocation = textBox3.Text;
             evnt.dEventStart = dateTimePicker2.Value;
             evnt.dEventEnd = dateTimePicker1.Value;
@@ -111,8 +115,8 @@ namespace U14_LEDShed
             for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
             {
                 evnt.slEventItems.Add(tblStock.Rows[rows].Cells["Item"].Value.ToString());
-                evnt.slEventItems.Add(tblStock.Rows[rows].Cells["Amount"].Value.ToString());
-                evnt.slEventItems.Add(tblStock.Rows[rows].Cells["Cost"].Value.ToString());
+                evnt.slItemAmount.Add(tblStock.Rows[rows].Cells["Amount"].Value.ToString());
+                evnt.slItemCost.Add(tblStock.Rows[rows].Cells["Cost"].Value.ToString());
             }
         }
 

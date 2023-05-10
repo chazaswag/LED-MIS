@@ -17,11 +17,11 @@ namespace U14_LEDShed
         {
             InitializeComponent();
             controlClass = inControl;
-        }
 
-        private void EventViewer_Load(object sender, EventArgs e)
-        {
-
+            foreach (Event e in controlClass.eventsList)
+            {
+                lstEvents.Items.Add(e.sEventName);
+            }
         }
     }
 }

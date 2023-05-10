@@ -31,5 +31,13 @@ namespace U14_LEDShed
         {
 
         }
+
+        private void btnViewEvent_Click(object sender, EventArgs e)
+        {
+            EventViewer eventviewer = new EventViewer(controlClass);
+            this.Hide();
+            eventviewer.ShowDialog();
+            this.Show();
+        }
     }
 }
