@@ -365,7 +365,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(60, 163);
+            this.txtEmail.Location = new System.Drawing.Point(53, 163);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(384, 28);
@@ -374,7 +374,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(66, 147);
+            this.label15.Location = new System.Drawing.Point(63, 147);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 13);
             this.label15.TabIndex = 3;

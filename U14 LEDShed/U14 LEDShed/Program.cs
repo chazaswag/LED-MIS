@@ -12,9 +12,6 @@ namespace U14_LEDShed
         static void Main()
         {
             Control control = new Control();
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(control));
 
             Event e1 = new Event();
             e1.sEventName = "Test Name";
@@ -31,7 +28,15 @@ namespace U14_LEDShed
             e1.slEventItems.Add("Vans");
             e1.slItemAmount.Add("20");
             e1.slItemCost.Add("2.50");
+            e1.dTotalcost = 305;
             control.eventsList.Add(e1);
+
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1(control));
+
+     
         }
     }
 }

@@ -17,6 +17,7 @@ namespace U14_LEDShed
         public DateTime dEventEnd;
         public string sEventLocation;
         public double dDays;
+        public double dTotalcost;
         public List<string> slEventItems = new List<string>();
         public List<string> slItemAmount = new List<string>();
         public List<string> slItemCost = new List<string>();

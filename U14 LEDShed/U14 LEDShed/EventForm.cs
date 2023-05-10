@@ -111,6 +111,8 @@ namespace U14_LEDShed
             evnt.dEventEnd = dateTimePicker1.Value;
             evnt.sEmail = txtEmail.Text;
             evnt.sPhoneNumber = txtPhoneNumber.Text;
+            evnt.dTotalcost = evntcst.dTotalCost;
+
 
             for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
             {
@@ -121,11 +123,11 @@ namespace U14_LEDShed
         }
 
         private void btnComplete_Click(object sender, EventArgs e)
-        {
-            writeToObject();
+        { 
             evnt.DatesElapsed();
             calculateItems();
             totalmoney();
+            writeToObject();
         }
 
         private void button1_Click(object sender, EventArgs e)
