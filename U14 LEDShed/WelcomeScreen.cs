@@ -12,9 +12,37 @@ namespace U14_LEDShed
 {
     public partial class WelcomeScreen : Form
     {
-        public WelcomeScreen()
+        Control controlClass;
+        public WelcomeScreen(Control inControl)
         {
             InitializeComponent();
+            controlClass = inControl;
+        }
+
+        private void btnNewEvent_Click(object sender, EventArgs e)
+        {
+            EventForm eventform = new EventForm(controlClass);
+            this.Hide();
+            eventform.ShowDialog();
+            this.Show();
+        }
+
+        private void WelcomeScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewEvent_Click(object sender, EventArgs e)
+        {
+            EventViewer eventviewer = new EventViewer(controlClass);
+            this.Hide();
+            eventviewer.ShowDialog();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

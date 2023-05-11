@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace U14_LEDShed
 {
-    class EventCost
+   
+    public class EventCost
     {
         public double dTransportCost;
         public double dStaffingCost;

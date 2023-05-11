@@ -33,13 +33,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.iconLedShed = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblWarning = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
+            this.iconLedShed = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -75,16 +75,6 @@
             this.txtPassword.Size = new System.Drawing.Size(184, 20);
             this.txtPassword.TabIndex = 4;
             // 
-            // iconLedShed
-            // 
-            this.iconLedShed.Image = ((System.Drawing.Image)(resources.GetObject("iconLedShed.Image")));
-            this.iconLedShed.Location = new System.Drawing.Point(0, 29);
-            this.iconLedShed.Margin = new System.Windows.Forms.Padding(0);
-            this.iconLedShed.Name = "iconLedShed";
-            this.iconLedShed.Size = new System.Drawing.Size(601, 73);
-            this.iconLedShed.TabIndex = 5;
-            this.iconLedShed.TabStop = false;
-            // 
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(330, 326);
@@ -110,14 +100,13 @@
             this.groupBox1.BackColor = System.Drawing.Color.Black;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.iconLedShed);
-            this.groupBox1.Location = new System.Drawing.Point(0, -20);
+            this.groupBox1.Location = new System.Drawing.Point(2, -16);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(803, 105);
-            this.groupBox1.TabIndex = 8;
+            this.groupBox1.Size = new System.Drawing.Size(803, 102);
+            this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -125,15 +114,25 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(662, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 6;
-            this.label1.Text = "log in";
+            this.label1.Text = "Log-In";
+            // 
+            // iconLedShed
+            // 
+            this.iconLedShed.Image = ((System.Drawing.Image)(resources.GetObject("iconLedShed.Image")));
+            this.iconLedShed.Location = new System.Drawing.Point(0, 25);
+            this.iconLedShed.Margin = new System.Windows.Forms.Padding(0);
+            this.iconLedShed.Name = "iconLedShed";
+            this.iconLedShed.Size = new System.Drawing.Size(601, 73);
+            this.iconLedShed.TabIndex = 5;
+            this.iconLedShed.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SlateGray;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblWarning);
@@ -143,11 +142,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LED Shed Log-in";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,11 +158,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.PictureBox iconLedShed;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblWarning;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox iconLedShed;
     }
 }
 

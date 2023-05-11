@@ -12,9 +12,11 @@ namespace U14_LEDShed
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        Control controlClass;
+        public Form1(Control inControl)
         {
             InitializeComponent();
+            controlClass = inControl;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -26,7 +28,7 @@ namespace U14_LEDShed
             if (txtUsername.Text == "login" && txtPassword.Text == "1234")
             {
                 lblWarning.Visible = false;
-                WelcomeScreen mm = new WelcomeScreen();
+                WelcomeScreen mm = new WelcomeScreen(controlClass);
                 this.Hide();
                 mm.ShowDialog();
                 this.Close();

@@ -6,14 +6,25 @@ using System.Threading.Tasks;
 
 namespace U14_LEDShed
 {
-    class Event
-    {
+    public class Event
+    {   
         public string sEventName;
+        public string sCompanyName;
         public string sEmail;
-        public int iPhoneNumber;
+        public string sPhoneNumber;
         public string sEventDetails;
-        public string sEventDates;
+        public DateTime dEventStart;
+        public DateTime dEventEnd;
         public string sEventLocation;
-        public string sStockNeeded;
+        public double dDays;
+        public double dTotalcost;
+        public List<string> slEventItems = new List<string>();
+        public List<string> slItemAmount = new List<string>();
+        public List<string> slItemCost = new List<string>();
+        public void DatesElapsed()
+        {
+            double numberOfDays = Math.Ceiling((dEventEnd - dEventStart).TotalDays);
+            dDays= int.Parse(numberOfDays.ToString()) + 1;
+        }
     }
 }

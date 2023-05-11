@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace U14_LEDShed
 {
-    class Stock
+    public class Stock
     {
         public string sEqupimentName;
         public string sEqupimentType;
