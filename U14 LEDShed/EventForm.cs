@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace U14_LEDShed
@@ -30,6 +23,7 @@ namespace U14_LEDShed
             EventDetailsBox.Visible = false;
             btnCompleteEvent.Visible = false;
             EventContactBox.Visible = false;
+            freelancer.Visible = false;
         }
 
         private void btnEventDetails_Click(object sender, EventArgs e)
@@ -38,6 +32,7 @@ namespace U14_LEDShed
             EventDetailsBox.Visible = true;
             btnCompleteEvent.Visible = false;
             EventContactBox.Visible = false;
+            freelancer.Visible = false;
         }
 
         private void btnEventCosts_Click(object sender, EventArgs e)
@@ -46,6 +41,7 @@ namespace U14_LEDShed
             EventDetailsBox.Visible = false;
             btnCompleteEvent.Visible = true;
             EventContactBox.Visible = false;
+            freelancer.Visible = false;
         }
         private void btnContact_Click(object sender, EventArgs e)
         {
@@ -53,11 +49,24 @@ namespace U14_LEDShed
             CostDetailsBox.Visible = false;
             EventDetailsBox.Visible = false;
             btnCompleteEvent.Visible = false;
+            freelancer.Visible = false;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            EventContactBox.Visible = false;
+            CostDetailsBox.Visible = false;
+            EventDetailsBox.Visible = false;
+            btnCompleteEvent.Visible = false;
+            freelancer.Visible = true;
         }
 
         private void EventForm_Load_1(object sender, EventArgs e)
         {
-
+            foreach (Freelancer f in controlClass.freelancerList)
+            {
+                freelancherCheckbox.Items.Add(f.sName);
+            }
         }
 
         private void tblStock_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -69,6 +78,7 @@ namespace U14_LEDShed
         {
             calculateItems();
         }
+
 
         public void calculateItems()
         {
@@ -82,9 +92,9 @@ namespace U14_LEDShed
             fOverall = 0;
             for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
             {
-                    float fTotal = float.Parse(tblStock.Rows[rows].Cells["Total"].Value.ToString());
-                    fOverall += fTotal;
-                    label3.Text = "Total: " + fOverall.ToString();
+                float fTotal = float.Parse(tblStock.Rows[rows].Cells["Total"].Value.ToString());
+                fOverall += fTotal;
+                label3.Text = "Total: " + fOverall.ToString();
             }
         }
         public void totalmoney()
@@ -123,7 +133,7 @@ namespace U14_LEDShed
         }
 
         private void btnComplete_Click(object sender, EventArgs e)
-        { 
+        {
             evnt.DatesElapsed();
             calculateItems();
             totalmoney();
@@ -139,5 +149,7 @@ namespace U14_LEDShed
             controlClass.eventsList.Add(evnt);
             this.Close();
         }
+
+
     }
 }

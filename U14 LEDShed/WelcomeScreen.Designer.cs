@@ -68,6 +68,7 @@
             this.btnNewFreelancer.TabIndex = 13;
             this.btnNewFreelancer.Text = "Add a New Freelancer";
             this.btnNewFreelancer.UseVisualStyleBackColor = true;
+            this.btnNewFreelancer.Click += new System.EventHandler(this.btnNewFreelancer_Click);
             // 
             // btnEditFreelancer
             // 

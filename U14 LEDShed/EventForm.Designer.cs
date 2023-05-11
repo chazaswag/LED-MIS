@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnComplete = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnEventCosts = new System.Windows.Forms.Button();
@@ -80,6 +81,9 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.EventDetailsBox = new System.Windows.Forms.GroupBox();
+            this.freelancer = new System.Windows.Forms.GroupBox();
+            this.freelancherCheckbox = new System.Windows.Forms.CheckedListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -90,11 +94,13 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.EventDetailsBox.SuspendLayout();
+            this.freelancer.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btnComplete);
             this.groupBox2.Controls.Add(this.btnStock);
             this.groupBox2.Controls.Add(this.btnEventCosts);
@@ -106,6 +112,16 @@
             this.groupBox2.Size = new System.Drawing.Size(278, 370);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(53, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 46);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Freelancers";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnComplete
             // 
@@ -119,7 +135,7 @@
             // 
             // btnStock
             // 
-            this.btnStock.Location = new System.Drawing.Point(53, 179);
+            this.btnStock.Location = new System.Drawing.Point(53, 139);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(141, 46);
             this.btnStock.TabIndex = 15;
@@ -129,7 +145,7 @@
             // 
             // btnEventCosts
             // 
-            this.btnEventCosts.Location = new System.Drawing.Point(53, 246);
+            this.btnEventCosts.Location = new System.Drawing.Point(53, 254);
             this.btnEventCosts.Name = "btnEventCosts";
             this.btnEventCosts.Size = new System.Drawing.Size(141, 46);
             this.btnEventCosts.TabIndex = 14;
@@ -139,7 +155,7 @@
             // 
             // btnContact
             // 
-            this.btnContact.Location = new System.Drawing.Point(53, 111);
+            this.btnContact.Location = new System.Drawing.Point(53, 79);
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(141, 46);
             this.btnContact.TabIndex = 13;
@@ -149,7 +165,7 @@
             // 
             // btnEventDetails
             // 
-            this.btnEventDetails.Location = new System.Drawing.Point(53, 45);
+            this.btnEventDetails.Location = new System.Drawing.Point(53, 19);
             this.btnEventDetails.Name = "btnEventDetails";
             this.btnEventDetails.Size = new System.Drawing.Size(141, 46);
             this.btnEventDetails.TabIndex = 12;
@@ -578,6 +594,35 @@
             this.EventDetailsBox.TabIndex = 14;
             this.EventDetailsBox.TabStop = false;
             // 
+            // freelancer
+            // 
+            this.freelancer.BackColor = System.Drawing.SystemColors.GrayText;
+            this.freelancer.Controls.Add(this.freelancherCheckbox);
+            this.freelancer.Controls.Add(this.label4);
+            this.freelancer.Location = new System.Drawing.Point(269, 85);
+            this.freelancer.Name = "freelancer";
+            this.freelancer.Size = new System.Drawing.Size(545, 423);
+            this.freelancer.TabIndex = 20;
+            this.freelancer.TabStop = false;
+            this.freelancer.Visible = false;
+            // 
+            // freelancherCheckbox
+            // 
+            this.freelancherCheckbox.FormattingEnabled = true;
+            this.freelancherCheckbox.Location = new System.Drawing.Point(102, 77);
+            this.freelancherCheckbox.Name = "freelancherCheckbox";
+            this.freelancherCheckbox.Size = new System.Drawing.Size(296, 244);
+            this.freelancherCheckbox.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(99, 53);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Freelancers";
+            // 
             // EventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,6 +633,7 @@
             this.Controls.Add(this.EventDetailsBox);
             this.Controls.Add(this.CostDetailsBox);
             this.Controls.Add(this.btnCompleteEvent);
+            this.Controls.Add(this.freelancer);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.EventContactBox);
             this.Name = "EventForm";
@@ -610,6 +656,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.EventDetailsBox.ResumeLayout(false);
             this.EventDetailsBox.PerformLayout();
+            this.freelancer.ResumeLayout(false);
+            this.freelancer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -666,5 +714,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox EventDetailsBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox freelancer;
+        private System.Windows.Forms.CheckedListBox freelancherCheckbox;
+        private System.Windows.Forms.Label label4;
     }
 }

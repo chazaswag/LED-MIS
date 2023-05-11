@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace U14_LEDShed
@@ -12,6 +9,18 @@ namespace U14_LEDShed
         static void Main()
         {
             Control control = new Control();
+
+            Freelancer f1 = new Freelancer();
+            f1.sName = "James Normfolk";
+            f1.sDailyRate = "125";
+            f1.sAddress = "somewhere";
+            control.freelancerList.Add(f1);
+
+            Freelancer f2 = new Freelancer();
+            f2.sName = "Lily Allanson";
+            f2.sDailyRate = "135";
+            f2.sAddress = "somewhere else";
+            control.freelancerList.Add(f2);
 
             Event e1 = new Event();
             e1.sEventName = "Test Name";
@@ -36,7 +45,7 @@ namespace U14_LEDShed
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1(control));
 
-     
+
         }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace U14_LEDShed
@@ -43,6 +36,14 @@ namespace U14_LEDShed
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnNewFreelancer_Click(object sender, EventArgs e)
+        {
+            FreelancerForm freelancer = new FreelancerForm(controlClass);
+            this.Hide();
+            freelancer.ShowDialog();
+            this.Show();
         }
     }
 }

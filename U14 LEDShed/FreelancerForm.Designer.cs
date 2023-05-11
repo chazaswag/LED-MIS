@@ -35,44 +35,43 @@
             this.btnContact = new System.Windows.Forms.Button();
             this.btnEventDetails = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.iconLedShed = new System.Windows.Forms.PictureBox();
-            this.EventDetailsBox = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FreelancerDetailsBox = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.previousjobs = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.specialism = new System.Windows.Forms.TextBox();
+            this.avaliability = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.region = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.notes = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.PhoneNumber = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtCompanyName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.webaddress = new System.Windows.Forms.TextBox();
+            this.paymentdetailsBox = new System.Windows.Forms.GroupBox();
+            this.VAT = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.NiN = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.sortcode = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.dailyrate = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
-            this.EventDetailsBox.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.FreelancerDetailsBox.SuspendLayout();
+            this.email.SuspendLayout();
+            this.paymentdetailsBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -83,52 +82,55 @@
             this.groupBox2.Controls.Add(this.btnContact);
             this.groupBox2.Controls.Add(this.btnEventDetails);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox2.Location = new System.Drawing.Point(-10, 78);
+            this.groupBox2.Location = new System.Drawing.Point(-10, 80);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(278, 370);
+            this.groupBox2.Size = new System.Drawing.Size(278, 384);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
             // btnComplete
             // 
-            this.btnComplete.Location = new System.Drawing.Point(81, 313);
+            this.btnComplete.Location = new System.Drawing.Point(88, 297);
             this.btnComplete.Name = "btnComplete";
             this.btnComplete.Size = new System.Drawing.Size(82, 29);
             this.btnComplete.TabIndex = 9;
             this.btnComplete.Text = "Complete";
             this.btnComplete.UseVisualStyleBackColor = true;
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
             // 
             // btnStock
             // 
-            this.btnStock.Location = new System.Drawing.Point(53, 231);
+            this.btnStock.Location = new System.Drawing.Point(62, 213);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(141, 46);
             this.btnStock.TabIndex = 15;
             this.btnStock.Text = "Pay Details";
             this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // btnContact
             // 
-            this.btnContact.Location = new System.Drawing.Point(53, 129);
+            this.btnContact.Location = new System.Drawing.Point(62, 125);
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(141, 46);
             this.btnContact.TabIndex = 13;
             this.btnContact.Text = "Contact Details";
             this.btnContact.UseVisualStyleBackColor = true;
+            this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
             // btnEventDetails
             // 
-            this.btnEventDetails.Location = new System.Drawing.Point(53, 36);
+            this.btnEventDetails.Location = new System.Drawing.Point(62, 36);
             this.btnEventDetails.Name = "btnEventDetails";
             this.btnEventDetails.Size = new System.Drawing.Size(141, 46);
             this.btnEventDetails.TabIndex = 12;
             this.btnEventDetails.Text = "Freelancer Details";
             this.btnEventDetails.UseVisualStyleBackColor = true;
+            this.btnEventDetails.Click += new System.EventHandler(this.btnEventDetails_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Black;
-            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.iconLedShed);
             this.groupBox1.Location = new System.Drawing.Point(-1, -11);
@@ -138,15 +140,6 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.groupBox3.Location = new System.Drawing.Point(0, 98);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 355);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
             // 
             // label1
             // 
@@ -168,33 +161,66 @@
             this.iconLedShed.TabIndex = 5;
             this.iconLedShed.TabStop = false;
             // 
-            // EventDetailsBox
+            // FreelancerDetailsBox
             // 
-            this.EventDetailsBox.BackColor = System.Drawing.SystemColors.GrayText;
-            this.EventDetailsBox.Controls.Add(this.label7);
-            this.EventDetailsBox.Controls.Add(this.textBox9);
-            this.EventDetailsBox.Controls.Add(this.label2);
-            this.EventDetailsBox.Controls.Add(this.textBox2);
-            this.EventDetailsBox.Controls.Add(this.textBox1);
-            this.EventDetailsBox.Controls.Add(this.label10);
-            this.EventDetailsBox.Controls.Add(this.label11);
-            this.EventDetailsBox.Controls.Add(this.textBox3);
-            this.EventDetailsBox.Controls.Add(this.label12);
-            this.EventDetailsBox.Controls.Add(this.textBox4);
-            this.EventDetailsBox.Controls.Add(this.label13);
-            this.EventDetailsBox.Controls.Add(this.textBox5);
-            this.EventDetailsBox.Location = new System.Drawing.Point(266, 80);
-            this.EventDetailsBox.Name = "EventDetailsBox";
-            this.EventDetailsBox.Size = new System.Drawing.Size(545, 368);
-            this.EventDetailsBox.TabIndex = 17;
-            this.EventDetailsBox.TabStop = false;
+            this.FreelancerDetailsBox.BackColor = System.Drawing.SystemColors.GrayText;
+            this.FreelancerDetailsBox.Controls.Add(this.label7);
+            this.FreelancerDetailsBox.Controls.Add(this.previousjobs);
+            this.FreelancerDetailsBox.Controls.Add(this.label2);
+            this.FreelancerDetailsBox.Controls.Add(this.specialism);
+            this.FreelancerDetailsBox.Controls.Add(this.avaliability);
+            this.FreelancerDetailsBox.Controls.Add(this.label10);
+            this.FreelancerDetailsBox.Controls.Add(this.label11);
+            this.FreelancerDetailsBox.Controls.Add(this.region);
+            this.FreelancerDetailsBox.Controls.Add(this.label12);
+            this.FreelancerDetailsBox.Controls.Add(this.notes);
+            this.FreelancerDetailsBox.Controls.Add(this.label13);
+            this.FreelancerDetailsBox.Controls.Add(this.name);
+            this.FreelancerDetailsBox.Location = new System.Drawing.Point(266, 80);
+            this.FreelancerDetailsBox.Name = "FreelancerDetailsBox";
+            this.FreelancerDetailsBox.Size = new System.Drawing.Size(545, 384);
+            this.FreelancerDetailsBox.TabIndex = 17;
+            this.FreelancerDetailsBox.TabStop = false;
             // 
-            // textBox1
+            // label7
             // 
-            this.textBox1.Location = new System.Drawing.Point(51, 270);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 7;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(300, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Previous Jobs";
+            // 
+            // previousjobs
+            // 
+            this.previousjobs.Location = new System.Drawing.Point(283, 218);
+            this.previousjobs.Multiline = true;
+            this.previousjobs.Name = "previousjobs";
+            this.previousjobs.Size = new System.Drawing.Size(195, 60);
+            this.previousjobs.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(247, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Specialism";
+            // 
+            // specialism
+            // 
+            this.specialism.Location = new System.Drawing.Point(241, 45);
+            this.specialism.Name = "specialism";
+            this.specialism.Size = new System.Drawing.Size(146, 20);
+            this.specialism.TabIndex = 8;
+            // 
+            // avaliability
+            // 
+            this.avaliability.Location = new System.Drawing.Point(51, 270);
+            this.avaliability.Name = "avaliability";
+            this.avaliability.Size = new System.Drawing.Size(146, 20);
+            this.avaliability.TabIndex = 7;
             // 
             // label10
             // 
@@ -214,12 +240,12 @@
             this.label11.TabIndex = 5;
             this.label11.Text = "Region";
             // 
-            // textBox3
+            // region
             // 
-            this.textBox3.Location = new System.Drawing.Point(51, 203);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(146, 20);
-            this.textBox3.TabIndex = 4;
+            this.region.Location = new System.Drawing.Point(51, 203);
+            this.region.Name = "region";
+            this.region.Size = new System.Drawing.Size(146, 20);
+            this.region.TabIndex = 4;
             // 
             // label12
             // 
@@ -230,13 +256,13 @@
             this.label12.TabIndex = 3;
             this.label12.Text = "Profession Notes";
             // 
-            // textBox4
+            // notes
             // 
-            this.textBox4.Location = new System.Drawing.Point(51, 97);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(456, 60);
-            this.textBox4.TabIndex = 2;
+            this.notes.Location = new System.Drawing.Point(51, 97);
+            this.notes.Multiline = true;
+            this.notes.Name = "notes";
+            this.notes.Size = new System.Drawing.Size(456, 60);
+            this.notes.TabIndex = 2;
             // 
             // label13
             // 
@@ -247,27 +273,27 @@
             this.label13.TabIndex = 1;
             this.label13.Text = "Name";
             // 
-            // textBox5
+            // name
             // 
-            this.textBox5.Location = new System.Drawing.Point(51, 45);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(146, 20);
-            this.textBox5.TabIndex = 0;
+            this.name.Location = new System.Drawing.Point(51, 45);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(146, 20);
+            this.name.TabIndex = 0;
             // 
-            // groupBox4
+            // email
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.GrayText;
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.txtPhoneNumber);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.txtEmail);
-            this.groupBox4.Controls.Add(this.txtCompanyName);
-            this.groupBox4.Location = new System.Drawing.Point(266, 78);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(650, 462);
-            this.groupBox4.TabIndex = 21;
-            this.groupBox4.TabStop = false;
+            this.email.BackColor = System.Drawing.SystemColors.GrayText;
+            this.email.Controls.Add(this.label14);
+            this.email.Controls.Add(this.PhoneNumber);
+            this.email.Controls.Add(this.label16);
+            this.email.Controls.Add(this.label15);
+            this.email.Controls.Add(this.txtEmail);
+            this.email.Controls.Add(this.webaddress);
+            this.email.Location = new System.Drawing.Point(266, 78);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(545, 386);
+            this.email.TabIndex = 21;
+            this.email.TabStop = false;
             // 
             // label14
             // 
@@ -278,12 +304,12 @@
             this.label14.TabIndex = 11;
             this.label14.Text = "Web Address";
             // 
-            // txtPhoneNumber
+            // PhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(51, 111);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(146, 20);
-            this.txtPhoneNumber.TabIndex = 6;
+            this.PhoneNumber.Location = new System.Drawing.Point(51, 111);
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Size = new System.Drawing.Size(146, 20);
+            this.PhoneNumber.TabIndex = 6;
             // 
             // label16
             // 
@@ -311,52 +337,70 @@
             this.txtEmail.Size = new System.Drawing.Size(384, 28);
             this.txtEmail.TabIndex = 8;
             // 
-            // txtCompanyName
+            // webaddress
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(49, 59);
-            this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(146, 20);
-            this.txtCompanyName.TabIndex = 10;
+            this.webaddress.Location = new System.Drawing.Point(49, 59);
+            this.webaddress.Name = "webaddress";
+            this.webaddress.Size = new System.Drawing.Size(146, 20);
+            this.webaddress.TabIndex = 10;
             // 
-            // label2
+            // paymentdetailsBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(247, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Specialism";
+            this.paymentdetailsBox.BackColor = System.Drawing.SystemColors.GrayText;
+            this.paymentdetailsBox.Controls.Add(this.VAT);
+            this.paymentdetailsBox.Controls.Add(this.label6);
+            this.paymentdetailsBox.Controls.Add(this.NiN);
+            this.paymentdetailsBox.Controls.Add(this.label3);
+            this.paymentdetailsBox.Controls.Add(this.sortcode);
+            this.paymentdetailsBox.Controls.Add(this.label4);
+            this.paymentdetailsBox.Controls.Add(this.label5);
+            this.paymentdetailsBox.Controls.Add(this.dailyrate);
+            this.paymentdetailsBox.Location = new System.Drawing.Point(266, 78);
+            this.paymentdetailsBox.Name = "paymentdetailsBox";
+            this.paymentdetailsBox.Size = new System.Drawing.Size(567, 392);
+            this.paymentdetailsBox.TabIndex = 22;
+            this.paymentdetailsBox.TabStop = false;
             // 
-            // textBox2
+            // VAT
             // 
-            this.textBox2.Location = new System.Drawing.Point(241, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 20);
-            this.textBox2.TabIndex = 8;
+            this.VAT.AutoSize = true;
+            this.VAT.Location = new System.Drawing.Point(60, 278);
+            this.VAT.Name = "VAT";
+            this.VAT.Size = new System.Drawing.Size(15, 14);
+            this.VAT.TabIndex = 11;
+            this.VAT.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // label6
             // 
-            this.groupBox5.BackColor = System.Drawing.SystemColors.GrayText;
-            this.groupBox5.Controls.Add(this.checkBox1);
-            this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.textBox6);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.textBox7);
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.textBox8);
-            this.groupBox5.Location = new System.Drawing.Point(266, 78);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(567, 392);
-            this.groupBox5.TabIndex = 22;
-            this.groupBox5.TabStop = false;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(53, 248);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "VAT Registered?";
             // 
-            // textBox7
+            // NiN
             // 
-            this.textBox7.Location = new System.Drawing.Point(51, 127);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(146, 20);
-            this.textBox7.TabIndex = 7;
+            this.NiN.Location = new System.Drawing.Point(51, 197);
+            this.NiN.Name = "NiN";
+            this.NiN.Size = new System.Drawing.Size(146, 20);
+            this.NiN.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(57, 173);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "National Insurance Number";
+            // 
+            // sortcode
+            // 
+            this.sortcode.Location = new System.Drawing.Point(51, 127);
+            this.sortcode.Name = "sortcode";
+            this.sortcode.Size = new System.Drawing.Size(146, 20);
+            this.sortcode.TabIndex = 7;
             // 
             // label4
             // 
@@ -376,86 +420,37 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Daily Rate";
             // 
-            // textBox8
+            // dailyrate
             // 
-            this.textBox8.Location = new System.Drawing.Point(51, 60);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(146, 20);
-            this.textBox8.TabIndex = 4;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(51, 197);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(146, 20);
-            this.textBox6.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 173);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "National Insurance Number";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(53, 248);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "VAT Registered?";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(60, 278);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(300, 188);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Previous Jobs";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(283, 218);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(195, 60);
-            this.textBox9.TabIndex = 16;
+            this.dailyrate.Location = new System.Drawing.Point(51, 60);
+            this.dailyrate.Name = "dailyrate";
+            this.dailyrate.Size = new System.Drawing.Size(146, 20);
+            this.dailyrate.TabIndex = 4;
             // 
             // FreelancerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.EventDetailsBox);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.FreelancerDetailsBox);
+            this.Controls.Add(this.paymentdetailsBox);
+            this.Controls.Add(this.email);
             this.Name = "FreelancerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FreelancerForm";
+            this.Load += new System.EventHandler(this.FreelancerForm_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).EndInit();
-            this.EventDetailsBox.ResumeLayout(false);
-            this.EventDetailsBox.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.FreelancerDetailsBox.ResumeLayout(false);
+            this.FreelancerDetailsBox.PerformLayout();
+            this.email.ResumeLayout(false);
+            this.email.PerformLayout();
+            this.paymentdetailsBox.ResumeLayout(false);
+            this.paymentdetailsBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -467,38 +462,37 @@
         private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Button btnContact;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox iconLedShed;
-        private System.Windows.Forms.GroupBox EventDetailsBox;
+        private System.Windows.Forms.GroupBox FreelancerDetailsBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox region;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox notes;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Button btnEventDetails;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox avaliability;
+        private System.Windows.Forms.GroupBox email;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.TextBox PhoneNumber;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtCompanyName;
+        private System.Windows.Forms.TextBox webaddress;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox specialism;
+        private System.Windows.Forms.GroupBox paymentdetailsBox;
+        private System.Windows.Forms.TextBox sortcode;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox dailyrate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox NiN;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox VAT;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox previousjobs;
     }
 }

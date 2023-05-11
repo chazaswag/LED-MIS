@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace U14_LEDShed
 {
+    public struct eventFreeLancer
+    {
+        public string name;
+        public bool onevent;
+    }
     public class Event
-    {   
+    {
         public string sEventName;
         public string sCompanyName;
         public string sEmail;
@@ -21,10 +23,11 @@ namespace U14_LEDShed
         public List<string> slEventItems = new List<string>();
         public List<string> slItemAmount = new List<string>();
         public List<string> slItemCost = new List<string>();
+        public List<eventFreeLancer> freelancerList = new List<eventFreeLancer>();
         public void DatesElapsed()
         {
             double numberOfDays = Math.Ceiling((dEventEnd - dEventStart).TotalDays);
-            dDays= int.Parse(numberOfDays.ToString()) + 1;
+            dDays = int.Parse(numberOfDays.ToString()) + 1;
         }
     }
 }
