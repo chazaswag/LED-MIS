@@ -53,9 +53,9 @@ namespace U14_LEDShed
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
-            WritetoObject();
-            controlclass.freelancerList.Add(free);
-            this.Close();
+                WritetoObject();
+                controlclass.freelancerList.Add(free);
+                this.Close();
         }
 
         private void FreelancerForm_Load(object sender, EventArgs e)

@@ -32,11 +32,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.iconLedShed = new System.Windows.Forms.PictureBox();
-            this.tblStock = new System.Windows.Forms.DataGridView();
-            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -54,12 +49,19 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtevebtlocation = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.EventDetailsBox = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnViewEvent = new System.Windows.Forms.Button();
-            this.lstEvents = new System.Windows.Forms.ListBox();
+            this.freelancerchx = new System.Windows.Forms.CheckedListBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tblStock = new System.Windows.Forms.DataGridView();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lstEvents = new System.Windows.Forms.ListBox();
+            this.btnViewEvent = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.EventDetailsBox = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblStock)).BeginInit();
@@ -98,44 +100,6 @@
             this.iconLedShed.Size = new System.Drawing.Size(601, 73);
             this.iconLedShed.TabIndex = 5;
             this.iconLedShed.TabStop = false;
-            // 
-            // tblStock
-            // 
-            this.tblStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Item,
-            this.Amount,
-            this.Cost,
-            this.Total});
-            this.tblStock.Location = new System.Drawing.Point(334, 142);
-            this.tblStock.Name = "tblStock";
-            this.tblStock.Size = new System.Drawing.Size(443, 250);
-            this.tblStock.TabIndex = 107;
-            // 
-            // Item
-            // 
-            this.Item.Frozen = true;
-            this.Item.HeaderText = "Item";
-            this.Item.Name = "Item";
-            this.Item.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Amount
-            // 
-            this.Amount.Frozen = true;
-            this.Amount.HeaderText = "Amount";
-            this.Amount.Name = "Amount";
-            // 
-            // Cost
-            // 
-            this.Cost.Frozen = true;
-            this.Cost.HeaderText = "Cost";
-            this.Cost.Name = "Cost";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
             // 
             // label14
             // 
@@ -276,45 +240,78 @@
             this.txtevebtlocation.Size = new System.Drawing.Size(146, 20);
             this.txtevebtlocation.TabIndex = 94;
             // 
-            // label7
+            // freelancerchx
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(333, 124);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
-            this.label7.TabIndex = 89;
-            this.label7.Text = "Equipment";
+            this.freelancerchx.FormattingEnabled = true;
+            this.freelancerchx.Location = new System.Drawing.Point(335, 294);
+            this.freelancerchx.Name = "freelancerchx";
+            this.freelancerchx.Size = new System.Drawing.Size(296, 139);
+            this.freelancerchx.TabIndex = 121;
             // 
-            // EventDetailsBox
+            // label5
             // 
-            this.EventDetailsBox.BackColor = System.Drawing.SystemColors.GrayText;
-            this.EventDetailsBox.Controls.Add(this.label3);
-            this.EventDetailsBox.Controls.Add(this.btnViewEvent);
-            this.EventDetailsBox.Controls.Add(this.lstEvents);
-            this.EventDetailsBox.Location = new System.Drawing.Point(2, 85);
-            this.EventDetailsBox.Name = "EventDetailsBox";
-            this.EventDetailsBox.Size = new System.Drawing.Size(800, 368);
-            this.EventDetailsBox.TabIndex = 108;
-            this.EventDetailsBox.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(346, 278);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 120;
+            this.label5.Text = "Freelancers";
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(354, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Select an Event";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(499, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 119;
+            this.label2.Text = "Total cost:";
             // 
-            // btnViewEvent
+            // tblStock
             // 
-            this.btnViewEvent.Location = new System.Drawing.Point(460, 263);
-            this.btnViewEvent.Name = "btnViewEvent";
-            this.btnViewEvent.Size = new System.Drawing.Size(75, 23);
-            this.btnViewEvent.TabIndex = 20;
-            this.btnViewEvent.Text = "Load Event";
-            this.btnViewEvent.UseVisualStyleBackColor = true;
-            this.btnViewEvent.Click += new System.EventHandler(this.btnViewEvent_Click);
+            this.tblStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Item,
+            this.Amount,
+            this.Cost,
+            this.Total});
+            this.tblStock.Location = new System.Drawing.Point(333, 114);
+            this.tblStock.Name = "tblStock";
+            this.tblStock.Size = new System.Drawing.Size(443, 156);
+            this.tblStock.TabIndex = 118;
+            // 
+            // Item
+            // 
+            this.Item.Frozen = true;
+            this.Item.HeaderText = "Item";
+            this.Item.Name = "Item";
+            this.Item.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Amount
+            // 
+            this.Amount.Frozen = true;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            // 
+            // Cost
+            // 
+            this.Cost.Frozen = true;
+            this.Cost.HeaderText = "Cost";
+            this.Cost.Name = "Cost";
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(332, 96);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 13);
+            this.label17.TabIndex = 117;
+            this.label17.Text = "Equipment";
             // 
             // lstEvents
             // 
@@ -324,14 +321,36 @@
             this.lstEvents.Size = new System.Drawing.Size(287, 173);
             this.lstEvents.TabIndex = 19;
             // 
-            // label2
+            // btnViewEvent
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(500, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 109;
-            this.label2.Text = "Total cost:";
+            this.btnViewEvent.Location = new System.Drawing.Point(460, 263);
+            this.btnViewEvent.Name = "btnViewEvent";
+            this.btnViewEvent.Size = new System.Drawing.Size(75, 23);
+            this.btnViewEvent.TabIndex = 20;
+            this.btnViewEvent.Text = "Load Event";
+            this.btnViewEvent.UseVisualStyleBackColor = true;
+            this.btnViewEvent.Click += new System.EventHandler(this.btnViewEvent_Click_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(354, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Select an Event";
+            // 
+            // EventDetailsBox
+            // 
+            this.EventDetailsBox.BackColor = System.Drawing.SystemColors.GrayText;
+            this.EventDetailsBox.Controls.Add(this.label4);
+            this.EventDetailsBox.Controls.Add(this.btnViewEvent);
+            this.EventDetailsBox.Controls.Add(this.lstEvents);
+            this.EventDetailsBox.Location = new System.Drawing.Point(0, 85);
+            this.EventDetailsBox.Name = "EventDetailsBox";
+            this.EventDetailsBox.Size = new System.Drawing.Size(800, 378);
+            this.EventDetailsBox.TabIndex = 122;
+            this.EventDetailsBox.TabStop = false;
             // 
             // EventViewer
             // 
@@ -340,9 +359,12 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.EventDetailsBox);
+            this.Controls.Add(this.freelancerchx);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tblStock);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.label16);
@@ -360,10 +382,10 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtevebtlocation);
-            this.Controls.Add(this.label7);
             this.Name = "EventViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EventViewer";
+            this.Load += new System.EventHandler(this.EventViewer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).EndInit();
@@ -380,11 +402,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox iconLedShed;
-        private System.Windows.Forms.DataGridView tblStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label16;
@@ -402,11 +419,18 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtevebtlocation;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox EventDetailsBox;
-        private System.Windows.Forms.Button btnViewEvent;
-        private System.Windows.Forms.ListBox lstEvents;
+        private System.Windows.Forms.CheckedListBox freelancerchx;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView tblStock;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ListBox lstEvents;
+        private System.Windows.Forms.Button btnViewEvent;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox EventDetailsBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }

@@ -67,6 +67,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Freelancer Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Freelancer Viewer.Designer.cs">
+      <DependentUpon>Freelancer Viewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Freelancer.cs" />
     <Compile Include="FreelancerForm.cs">
       <SubType>Form</SubType>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Freelancer Viewer.resx">
+      <DependentUpon>Freelancer Viewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FreelancerForm.resx">
       <DependentUpon>FreelancerForm.cs</DependentUpon>

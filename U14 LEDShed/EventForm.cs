@@ -82,19 +82,25 @@ namespace U14_LEDShed
 
         public void calculateItems()
         {
-            for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
+            try
             {
-                float fQuantity = float.Parse(tblStock.Rows[rows].Cells["Amount"].Value.ToString());
-                float fCost = float.Parse(tblStock.Rows[rows].Cells["Cost"].Value.ToString());
-                float fAmount = fQuantity * fCost;
-                tblStock.Rows[rows].Cells["Total"].Value = fAmount;
+                for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
+                {
+                    float fQuantity = float.Parse(tblStock.Rows[rows].Cells["Amount"].Value.ToString());
+                    float fCost = float.Parse(tblStock.Rows[rows].Cells["Cost"].Value.ToString());
+                    float fAmount = fQuantity * fCost;
+                    tblStock.Rows[rows].Cells["Total"].Value = fAmount;
+                }
+                fOverall = 0;
+                for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
+                {
+                    float fTotal = float.Parse(tblStock.Rows[rows].Cells["Total"].Value.ToString());
+                    fOverall += fTotal;
+                    label3.Text = "Total: " + fOverall.ToString();
+                }
             }
-            fOverall = 0;
-            for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
-            {
-                float fTotal = float.Parse(tblStock.Rows[rows].Cells["Total"].Value.ToString());
-                fOverall += fTotal;
-                label3.Text = "Total: " + fOverall.ToString();
+            catch {
+                MessageBox.Show("Check the data is enetered incorrectly. Use numbers as digits not text.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
         public void totalmoney()
@@ -109,6 +115,14 @@ namespace U14_LEDShed
             txtCateringCost.Text = "Catering Cost: " + evntcst.dCateringCost;
             evntcst.dTotalCost = evntcst.dCateringCost + evntcst.dStaffingCost + evntcst.dAccomodationCost + evntcst.dTransportCost + fOverall;
             txtTotalCost.Text = "Total Cost: " + evntcst.dTotalCost;
+
+            for (int rows = 0; rows < freelancherCheckbox.Items.Count; rows++)
+            {
+                eventFreeLancer ef = new eventFreeLancer();
+                ef.name = freelancherCheckbox.Items[rows].ToString();
+                ef.onevent = freelancherCheckbox.GetItemChecked(rows);
+                evnt.freelancerList.Add(ef);
+            }
         }
 
         public void writeToObject()
@@ -131,6 +145,20 @@ namespace U14_LEDShed
                 evnt.slItemCost.Add(tblStock.Rows[rows].Cells["Cost"].Value.ToString());
             }
         }
+        bool valid = false;
+        public void ValidateForm()
+        {
+            if (textBox5.Text == "" || txtCompanyName.Text == "" || textBox4.Text == "" || textBox3.Text == "" || evnt.dDays < 1 || txtEmail.Text == "" || txtPhoneNumber.Text == "")
+            {
+                MessageBox.Show("Some of your details are invalid or blank. Please fill them in.");
+                valid = false;
+            }
+            else if (textBox3.Text.Contains("@") == false || textBox3.Text.Contains(".") == false)
+            {
+                MessageBox.Show("The email address is invalid.");
+                valid = false;
+            }
+        }
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
@@ -142,12 +170,18 @@ namespace U14_LEDShed
 
         private void button1_Click(object sender, EventArgs e)
         {
-            writeToObject();
+            valid = true;
             evnt.DatesElapsed();
-            calculateItems();
-            totalmoney();
-            controlClass.eventsList.Add(evnt);
-            this.Close();
+            ValidateForm();
+            if (valid)
+            {
+                writeToObject();
+                calculateItems();
+                totalmoney();
+                controlClass.eventsList.Add(evnt);
+                this.Close();
+            }
+
         }
 
 

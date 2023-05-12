@@ -19,7 +19,11 @@ namespace U14_LEDShed
             }
         }
 
-        private void btnViewEvent_Click(object sender, EventArgs e)
+        private void EventViewer_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnViewEvent_Click_1(object sender, EventArgs e)
         {
             if (lstEvents.SelectedItem == null)
             {
@@ -59,7 +63,14 @@ namespace U14_LEDShed
                     float fAmount = fQuantity * fCost;
                     tblStock.Rows[rows].Cells["Total"].Value = fAmount;
                 }
+
+                for (int rows = 0; rows < currentEvent.freelancerList.Count; rows++)
+                {
+                    freelancerchx.Items.Add(currentEvent.freelancerList[rows].name);
+                    freelancerchx.SetItemChecked(rows, currentEvent.freelancerList[rows].onevent);
+                }
             }
         }
+
     }
 }

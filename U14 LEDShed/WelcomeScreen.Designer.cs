@@ -36,13 +36,15 @@
             this.iconLedShed = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewEvent
             // 
-            this.btnNewEvent.Location = new System.Drawing.Point(52, 121);
+            this.btnNewEvent.Location = new System.Drawing.Point(41, 163);
             this.btnNewEvent.Name = "btnNewEvent";
             this.btnNewEvent.Size = new System.Drawing.Size(141, 46);
             this.btnNewEvent.TabIndex = 11;
@@ -52,7 +54,7 @@
             // 
             // btnViewEvent
             // 
-            this.btnViewEvent.Location = new System.Drawing.Point(52, 203);
+            this.btnViewEvent.Location = new System.Drawing.Point(232, 163);
             this.btnViewEvent.Name = "btnViewEvent";
             this.btnViewEvent.Size = new System.Drawing.Size(141, 46);
             this.btnViewEvent.TabIndex = 12;
@@ -62,7 +64,7 @@
             // 
             // btnNewFreelancer
             // 
-            this.btnNewFreelancer.Location = new System.Drawing.Point(52, 282);
+            this.btnNewFreelancer.Location = new System.Drawing.Point(41, 302);
             this.btnNewFreelancer.Name = "btnNewFreelancer";
             this.btnNewFreelancer.Size = new System.Drawing.Size(141, 46);
             this.btnNewFreelancer.TabIndex = 13;
@@ -72,12 +74,13 @@
             // 
             // btnEditFreelancer
             // 
-            this.btnEditFreelancer.Location = new System.Drawing.Point(52, 359);
+            this.btnEditFreelancer.Location = new System.Drawing.Point(232, 302);
             this.btnEditFreelancer.Name = "btnEditFreelancer";
             this.btnEditFreelancer.Size = new System.Drawing.Size(141, 46);
             this.btnEditFreelancer.TabIndex = 14;
             this.btnEditFreelancer.Text = "Edit your Freelancer";
             this.btnEditFreelancer.UseVisualStyleBackColor = true;
+            this.btnEditFreelancer.Click += new System.EventHandler(this.btnEditFreelancer_Click);
             // 
             // iconLedShed
             // 
@@ -112,12 +115,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(408, 125);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(370, 250);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // WelcomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEditFreelancer);
             this.Controls.Add(this.btnNewFreelancer);
             this.Controls.Add(this.btnViewEvent);
@@ -130,6 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,5 +158,6 @@
         private System.Windows.Forms.PictureBox iconLedShed;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

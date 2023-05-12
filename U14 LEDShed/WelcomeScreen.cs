@@ -45,5 +45,13 @@ namespace U14_LEDShed
             freelancer.ShowDialog();
             this.Show();
         }
+
+        private void btnEditFreelancer_Click(object sender, EventArgs e)
+        {
+            Freelancer_Viewer freelancerviewer = new Freelancer_Viewer(controlClass);
+            this.Hide();
+            freelancerviewer.ShowDialog();
+            this.Show();
+        }
     }
 }
