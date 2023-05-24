@@ -19,9 +19,9 @@ namespace U14_LEDShed
             InitializeComponent();
             controlClass = inControl;
 
-            foreach (Event f in controlClass.eventsList)
+            foreach (Freelancer f in controlClass.freelancerList)
             {
-                lstEvents.Items.Add(f.sEventName);
+                lstEvents.Items.Add(f.sName);
             }
         }
 

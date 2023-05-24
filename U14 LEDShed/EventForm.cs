@@ -86,21 +86,30 @@ namespace U14_LEDShed
             {
                 for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
                 {
-                    float fQuantity = float.Parse(tblStock.Rows[rows].Cells["Amount"].Value.ToString());
+                    float fQuantity = (float)Math.Ceiling(float.Parse(tblStock.Rows[rows].Cells["Amount"].Value.ToString()));
                     float fCost = float.Parse(tblStock.Rows[rows].Cells["Cost"].Value.ToString());
-                    float fAmount = fQuantity * fCost;
-                    tblStock.Rows[rows].Cells["Total"].Value = fAmount;
+                    if (fCost < 0 || fQuantity < 0)
+                    {
+                        MessageBox.Show("Check the data is enetered correctly. Numbers cannot be negative.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        float fAmount = fQuantity * fCost;
+                        tblStock.Rows[rows].Cells["Total"].Value = fAmount;
+                        tblStock.Rows[rows].Cells["Amount"].Value = fQuantity.ToString();
+                        fOverall = 0;
+                        for (rows = 0; rows < tblStock.Rows.Count - 1; rows++)
+                        {
+                            float fTotal = float.Parse(tblStock.Rows[rows].Cells["Total"].Value.ToString());
+                            fOverall += fTotal;
+                            label3.Text = "Total: " + fOverall.ToString();
+                        }
+                    }
                 }
-                fOverall = 0;
-                for (int rows = 0; rows < tblStock.Rows.Count - 1; rows++)
-                {
-                    float fTotal = float.Parse(tblStock.Rows[rows].Cells["Total"].Value.ToString());
-                    fOverall += fTotal;
-                    label3.Text = "Total: " + fOverall.ToString();
-                }
+                
             }
             catch {
-                MessageBox.Show("Check the data is enetered incorrectly. Use numbers as digits not text.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Check the data is enetered correctly. Use numbers as digits not text.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
         public void totalmoney()
@@ -122,6 +131,7 @@ namespace U14_LEDShed
                 ef.name = freelancherCheckbox.Items[rows].ToString();
                 ef.onevent = freelancherCheckbox.GetItemChecked(rows);
                 evnt.freelancerList.Add(ef);
+
             }
         }
 
@@ -153,9 +163,14 @@ namespace U14_LEDShed
                 MessageBox.Show("Some of your details are invalid or blank. Please fill them in.");
                 valid = false;
             }
-            else if (textBox3.Text.Contains("@") == false || textBox3.Text.Contains(".") == false)
+            if (textBox3.Text.Contains("@") == false || textBox3.Text.Contains(".") == false)
             {
                 MessageBox.Show("The email address is invalid.");
+                valid = false;
+            }
+            if (txtPhoneNumber.Text.Length > 14)
+            {
+                MessageBox.Show("The phone number is invalid.");
                 valid = false;
             }
         }
