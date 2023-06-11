@@ -1,5 +1,8 @@
-﻿namespace U14_LEDShed
+﻿using System;
+
+namespace U14_LEDShed
 {
+    [Serializable]
     public class Stock
     {
         public string sEqupimentName;

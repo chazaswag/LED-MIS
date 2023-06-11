@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace U14_LEDShed
 {
+    [Serializable]
     static class Program
     {
         [STAThread]

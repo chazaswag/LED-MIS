@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace U14_LEDShed
@@ -115,6 +116,7 @@ namespace U14_LEDShed
         }
         public void totalmoney()
         {
+            evnt.DatesElapsed();
             evntcst.dTransportCost = evnt.dDays * 22;
             txtTravelCost.Text = "Travel Cost: " + evntcst.dTransportCost;
             evntcst.dAccomodationCost = evnt.dDays * 32;
@@ -202,20 +204,25 @@ namespace U14_LEDShed
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
+          evnt.DatesElapsed();
+          totalmoney();
           printPreviewDialog1.Document = printDocument1;
           printPreviewDialog1.Show();
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            totalmoney();
-
+            evnt.DatesElapsed();
             Font fBold = new Font("Arial", 12, FontStyle.Bold);
             Font fNormal = new Font("Arial", 12, FontStyle.Regular);
             Font fUnderline = new Font("Arial", 12, FontStyle.Underline);
             int labelX = 100;
             int labelY = 200;
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string imagePath = Path.Combine(currentDirectory, @"..\..\src\pictures\printlogo.png");
+            Image image = Image.FromFile(imagePath);
 
+            e.Graphics.DrawImage(image, new Point(100, 50));
             e.Graphics.DrawString("Event Details", fUnderline, Brushes.Black, new Point(labelX, labelY - 40));
             e.Graphics.DrawString("Event Name: " + textBox5.Text, fBold, Brushes.Black, new Point(labelX, labelY));
             e.Graphics.DrawString("Company Name: " + txtCompanyName.Text, fBold, Brushes.Black, new Point(labelX, labelY + 20));
@@ -233,10 +240,13 @@ namespace U14_LEDShed
                     e.Graphics.DrawString(sFl, fBold, Brushes.Black, new Point(labelX, labelY + 180));
                 }
             }
-            e.Graphics.DrawString("", fBold, Brushes.Black, new Point(labelX, labelY + 200));
             e.Graphics.DrawString("Equipment", fUnderline, Brushes.Black, new Point(labelX, labelY + 300));
-            e.Graphics.DrawString("", fBold, Brushes.Black, new Point(labelX, labelY + 320));
-            e.Graphics.DrawString("", fBold, Brushes.Black, new Point(labelX, labelY + 340));
+            for (int i = 0; i < tblStock.Rows.Count - 1; i++)
+            {
+                string itemName = tblStock.Rows[i].Cells["Item"].Value.ToString();
+                e.Graphics.DrawString(itemName, fBold, Brushes.Black, new Point(labelX, labelY + 320));
+            }
+
             e.Graphics.DrawString("Total Cost: ", fUnderline, Brushes.Black, new Point(labelX, labelY + 400));
             e.Graphics.DrawString("£" + evntcst.dTotalCost, fBold, Brushes.Black, new Point(labelX, labelY + 420));
         }

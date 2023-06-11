@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace U14_LEDShed
 {
+
+    [Serializable]
     public struct eventFreeLancer
     {
         public string name;

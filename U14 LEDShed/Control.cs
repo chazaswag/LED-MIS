@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace U14_LEDShed
 {
+    [Serializable]
     public class Control
     {
         public List<Event> eventsList = new List<Event>();

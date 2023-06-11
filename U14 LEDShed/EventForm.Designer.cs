@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnComplete = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
@@ -84,7 +85,6 @@
             this.freelancer = new System.Windows.Forms.GroupBox();
             this.freelancherCheckbox = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBox2.SuspendLayout();
@@ -116,6 +116,16 @@
             this.groupBox2.Size = new System.Drawing.Size(278, 370);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(127, 316);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(82, 29);
+            this.btnPrint.TabIndex = 17;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // button1
             // 
@@ -627,16 +637,6 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Freelancers";
             // 
-            // btnPrint
-            // 
-            this.btnPrint.Location = new System.Drawing.Point(127, 316);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(82, 29);
-            this.btnPrint.TabIndex = 17;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
             // printPreviewDialog1
             // 
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -659,12 +659,12 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.EventDetailsBox);
-            this.Controls.Add(this.CostDetailsBox);
             this.Controls.Add(this.btnCompleteEvent);
             this.Controls.Add(this.freelancer);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.EventContactBox);
+            this.Controls.Add(this.EventDetailsBox);
+            this.Controls.Add(this.CostDetailsBox);
             this.Name = "EventForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EventForm";

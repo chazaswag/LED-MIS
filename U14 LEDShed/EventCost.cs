@@ -1,6 +1,8 @@
-﻿namespace U14_LEDShed
-{
+﻿using System;
 
+namespace U14_LEDShed
+{
+    [Serializable]
     public class EventCost
     {
         public double dTransportCost;
