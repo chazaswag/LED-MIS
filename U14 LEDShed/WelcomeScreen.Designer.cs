@@ -45,8 +45,8 @@
             this.editFreelancerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconLedShed)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -197,6 +197,13 @@
             this.saveFileToolStripMenuItem.Text = "Save File";
             this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
             // 
+            // openFileDataToolStripMenuItem
+            // 
+            this.openFileDataToolStripMenuItem.Name = "openFileDataToolStripMenuItem";
+            this.openFileDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openFileDataToolStripMenuItem.Text = "Open File Data";
+            this.openFileDataToolStripMenuItem.Click += new System.EventHandler(this.openFileDataToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -207,13 +214,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // openFileDataToolStripMenuItem
-            // 
-            this.openFileDataToolStripMenuItem.Name = "openFileDataToolStripMenuItem";
-            this.openFileDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openFileDataToolStripMenuItem.Text = "Open File Data";
-            this.openFileDataToolStripMenuItem.Click += new System.EventHandler(this.openFileDataToolStripMenuItem_Click);
             // 
             // WelcomeScreen
             // 

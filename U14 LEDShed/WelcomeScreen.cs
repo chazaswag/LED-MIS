@@ -114,8 +114,9 @@ namespace U14_LEDShed
                     binaryFormatter.Serialize(strm, inControl);
                 }
             }
-            catch 
+            catch (Exception c)
             {
+                MessageBox.Show(c.ToString());
                 MessageBox.Show("Error saving, trying again.", "Saving Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

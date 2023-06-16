@@ -10,6 +10,8 @@ namespace U14_LEDShed
         public string name;
         public bool onevent;
     }
+
+    [Serializable]
     public class Event
     {
         public string sEventName;
